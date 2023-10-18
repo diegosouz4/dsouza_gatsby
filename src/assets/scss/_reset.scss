@@ -1,0 +1,55 @@
+html,
+body,
+figure,
+img,
+div,
+input,
+select,
+option,
+textarea,
+fieldset,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+main {
+  font-family: var(--support-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 0.625rem;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.35;
+  margin: 0;
+  & + p {
+    margin-top: 0.625rem;
+  }
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}

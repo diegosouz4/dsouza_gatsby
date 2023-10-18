@@ -1,0 +1,92 @@
+{
+  "name": "Diego Souza",
+  "intro": "Sou desenvolvedor front-end e estou capacitado para trazer o <strong>seu projeto à vida.<strong/>",
+  "about": "Trabalho como designer desde 2010 e nessa estrada adquiri experiências com criação de website, branding, design gráfico e desenvolvimento de layouts. Atualmente, além de estar à frente de alguns projetos, estou focando minha carreira para o <strong>desenvolvimento web</strong> e estudando para me tornar um <strong>desenvolvedor full-stack.</strong>",
+  "social": {
+    "github": "https://github.com/diegosouz4",
+    "linkedin": "https://www.linkedin.com/in/diego-souza-419b9561/",
+    "behance": "https://www.behance.net/diegosouzaoliveira",
+    "instagram": "https://www.instagram.com/diegosouza_dsouza/"
+  },
+  "currently": [
+    {
+      "name": "Neoway",
+      "description": "",
+      "role": "Técnico em Desenvolvimento de Sistemas",
+      "range": "Ago/2022 - Atualmente"
+    },
+    {
+      "name": "Freelancer",
+      "description": "Trabalhando como desenvolvedor freelancer.",
+      "role": "Desenvolvedor front-end",
+      "range": "Ago/2018"
+    },
+    {
+      "name": "Planetário do Rio",
+      "description": "Fui responsável pelo desenvolvimento e manutenção do novo site, criação dos criativos de comunicação e das peças gráficas.",
+      "role": "Designer",
+      "range": "Jan/2022 - Jan/2023"
+    },
+    {
+      "name": "Poeme-se",
+      "description": "E-commerce de produtos literários. Fui responsável pela manutenção do e-commerce e do blog da empresa. Realização do desenvolvimento de toda a identidade visual da loja e criação das peças das mídias sociais.",
+      "role": "Web designer",
+      "range": "Ago/2018 - Ago/2022"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Cursos Alura",
+      "list": [
+        { "name": "Formação Iniciante em Programação", "duration": "110h" },
+        { "name": "Formação HTML e CSS", "duration": "190h" },
+        { "name": "Formação Front-end", "duration": "170h" }
+      ]
+    },
+    {
+      "title": "Cursos Origamid",
+      "list": [
+        { "name": "Wordpress como CMS", "duration": "18h" },
+        { "name": "Javascript ES6", "duration": "37h" },
+        { "name": "React", "duration": "18h" }
+      ]
+    }
+  ],
+  "skills": {
+    "developer": {
+      "title": "Desenvolvedor front-end",
+      "tags": [
+        "HTML",
+        "CSS",
+        "SASS",
+        "Javascript",
+        "Wordpress",
+        "React",
+        "Redux",
+        "Git"
+      ]
+    },
+    "designer": {
+      "title": "Designer - Ui - UX",
+      "tags": ["Figma", "Photoshop", "Illustrator","AdobeXD"]
+    }
+  },
+  "jobs": "Separei alguns projetos onde trabalhei durante esses anos. Gostou de algum?",
+  "testemonials": [
+    {
+      "name": "Leonardo Borba",
+      "role": "Publicitário",
+      "quote": "Diego tem uma qualidade rara que é o senso estético e habilidade de designer somada ao conhecimento de programação de front end. Isso ajuda demais na execução de qualquer projeto online."
+    }
+  ],
+  "study": {
+    "title": "Sei que há um longo caminho a percorrer para atingir o meu objetivo de me tornar um desenvolvedor full-stack. Por isso, estou sempre buscando aprender novas tecnologias. Nesta página, mostro os meus repositórios git."
+  },
+  "contact": {
+    "title": "FALE COMIGO",
+    "description": [
+      "Vamos bater um papo? Quero muito saber o que pensa sobre design, frontend, contratações.",
+      "Podemos trocar sugestões, conselhos, críticas, ideias ou podemos marcar um encontro para um bom café, o que acha?"
+    ]
+  }
+}
