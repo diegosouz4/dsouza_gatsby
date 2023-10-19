@@ -18,4 +18,22 @@
   --support-font: "Noto Sans", sans-serif;
 
   --box-shadow: 0.25rem 1rem 2rem -5rem rgba(37, 55, 81, 0.2);
+
+  //Animate
+  --pop: 250ms cubic-bezier(1, -0.01, 0.19, 1.47);
+  --pop-slow: 1s cubic-bezier(1, -0.01, 0.19, 1.47);
+
+  //Neumorphic cores
+  --neuClaro: #fff;
+  --neuClaro-dark: #2c3c50;
+  --neuEscuro: #c8d0e7;
+  --neuEscuro-dark: #031016;
+  --neuShadow: 0.3rem 0.3rem 0.6rem var(--neuEscuro),
+    -0.2rem -0.2rem 0.5rem var(--neuClaro);
+  --neuShadow-dark: 0.3rem 0.3rem 0.6rem var(--neuEscuro-dark),
+    -0.2rem -0.2rem 0.5rem var(--neuClaro-dark);
+  --neuInnerShadow: inset 0.2rem 0.2rem 0.5rem var(--neuEscuro),
+    inset 0.2rem 0.2rem 0.5rem var(--neuClaro);
+  --neuInnerShadow-dark: inset 0.2rem 0.2rem 0.5rem var(--neuEscuro-dark),
+    inset 0.2rem 0.2rem 0.5rem var(--neuClaro-dark);
 }

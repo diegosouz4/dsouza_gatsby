@@ -1,0 +1,51 @@
+.btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+
+  border: 1px solid var(--cor-cinza);
+  box-shadow: var(--neuShadow);
+  position: relative;
+  transition: var(--pop);
+  &:hover {
+    transform: scale(1.04);
+  }
+  &:focus {
+    border: 1px solid var(--cor-cinza-claro);
+    box-shadow: var(--neuInnerShadow);
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    path {
+      &:first-child {
+        transition: 750ms cubic-bezier(0.04, 0.2, 0.51, 1.4);
+        transform-origin: center;
+      }
+      &:last-child {
+        transition: 0.5s ease-out;
+      }
+    }
+  }
+
+  &.dark {
+    svg {
+      path,
+      circle {
+        fill: red;
+      }
+
+      path {
+        &:first-child {
+          transform: rotate(0.5turn);
+        }
+        &:last-child {
+          transform: translate3d(-18%, 0, 0);
+        }
+      }
+    }
+  }
+}

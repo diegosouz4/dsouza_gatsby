@@ -1,0 +1,25 @@
+.btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+
+  border: 1px solid var(--cor-cinza);
+  box-shadow: var(--neuShadow);
+  position: relative;
+  transition: var(--pop);
+  &:hover {
+    transform: scale(1.04);
+  }
+  &:focus {
+    border: 1px solid var(--cor-cinza-claro);
+    box-shadow: var(--neuInnerShadow);
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
