@@ -1,58 +1,123 @@
 .nav {
-  flex-grow: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.25rem;
-
-  @media (max-width: 600px) {
-    display: none;
-
-    &.open {
-      display: flex;
-    }
-  }
-
   a {
     color: var(--color-blue-300);
     font-family: inherit;
     font-size: 1rem;
-    padding: 4px 0;
     text-decoration: none;
+  }
 
-    position: relative;
-    overflow: hidden;
+  @media (max-width: 600px) {
+    &.open {
+      display: flex;
 
-    &:hover,
-    &:focus {
-      &::after {
-        background-color: var(--color-yellow-main);
-        bottom: 2px;
-        opacity: 1;
-      }
+      animation: showNav var(--pop-slow) forwards;
     }
 
-    &::after {
-      content: "";
-      background-color: var(--color-yellow-main);
-      display: block;
-      height: 2px;
+    background-color: var(--menu-bg);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 5rem;
+    width: 90%;
+    max-width: 200px;
+    padding: 0.625rem;
+
+    position: absolute;
+    right: 0.625rem;
+    top: calc(100% + 0.3125rem);
+    z-index: 2;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 100px, 0);
+
+    a {
+      color: var(--menu-links);
       width: 100%;
+      text-align: center;
 
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      opacity: 0;
-      transition: var(--pop);
-    }
+      padding: 0.625rem 0;
 
-    &.active {
-      font-weight: 600;
-      &::after {
-        bottom: 2px;
-        opacity: 1;
+      &:not(.active) {
+        &:hover,
+        &:focus {
+          background-color: var(--menu-links-hover);
+        }
+      }
+
+      &.active {
+        background-color: var(--menu-active);
+        color: var(--menu-active-link);
+      }
+
+      & + a {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
       }
     }
+  }
+
+  @media (min-width: 600px) {
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+
+    a {
+      padding: 6px 0;
+
+      position: relative;
+      overflow: hidden;
+
+      &:hover,
+      &:focus {
+        &::after {
+          background-color: var(--color-yellow-main);
+          bottom: 4px;
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        background-color: var(--color-yellow-main);
+        display: block;
+        height: 2px;
+        width: 100%;
+
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        opacity: 0;
+        transition: var(--pop);
+      }
+
+      &.active {
+        font-weight: 600;
+        &::after {
+          bottom: 2px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes showNav {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 50px, 0);
+  }
+  
+  to {
+    opacity: 1;
+    visibility: initial;
+    transform: translate3d(0, 0, 0);
   }
 }

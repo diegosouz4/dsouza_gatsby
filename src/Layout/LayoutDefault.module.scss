@@ -1,8 +1,41 @@
 .app {
+  --bg-color: var(--color-white-100);
+
+  --menu-bg: var(--color-white-100);
+  --menu-links: var(--color-blue-400);
+  --menu-links-hover: var(--color-white-200);
+  --menu-active: var(--color-blue-main);
+  --menu-active-link: var(--color-white-100);
+  
+  --support-color: var(--color-blue-main);
+  --neu-color-main: var(--neu-light);
+  --neu-color-border: var(--neu-light-border);
+  --neu-color-dark: var(--neu-light-200);
+  --neu-color-shadow: var(--neu-light-shadow);
+  --neu-color-shadow-inset: var(--neu-light-shadow-inset);
+  
+  background-color: var(--bg-color);
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  
   display: grid;
   grid-template-rows: auto 1fr auto;
-
+  
   &.dark {
-    background-color: black;
+    --bg-color: var(--color-blue-500);
+    
+    --menu-bg: var(--color-blue-400);
+    --menu-links: var(--color-blue-200);
+    --menu-links-hover: var(--color-blue-300);
+    --menu-active: var(--color-blue-200);
+    --menu-active-link: var(--color-blue-400);
+
+    --support-color: var(--color-blue-300);
+    --neu-color-main: var(--neu-dark);
+    --neu-color-border: var(--neu-dark-border);
+    --neu-color-dark: var(--neu-dark-200);
+    --neu-color-shadow: var(--neu-dark-shadow);
+    --neu-color-shadow-inset: var(--neu-dark-shadow-inset);
   }
 }

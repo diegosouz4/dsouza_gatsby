@@ -3,8 +3,10 @@
   --color-yellow-main: #f4d717;
 
   --color-blue-100: #e1e6ee;
-  --color-blue-200: #253751;
-  --color-blue-300: #182230;
+  --color-blue-200: #4687e3;
+  --color-blue-300: #3a5d8e;
+  --color-blue-400: #253751;
+  --color-blue-500: #182230;
 
   --color-white: #fff;
   --color-white-100: #f2f2f2;
@@ -24,16 +26,22 @@
   --pop-slow: 1s cubic-bezier(1, -0.01, 0.19, 1.47);
 
   //Neumorphic cores
-  --neuClaro: #fff;
-  --neuClaro-dark: #2c3c50;
-  --neuEscuro: #c8d0e7;
-  --neuEscuro-dark: #031016;
-  --neuShadow: 0.3rem 0.3rem 0.6rem var(--neuEscuro),
-    -0.2rem -0.2rem 0.5rem var(--neuClaro);
-  --neuShadow-dark: 0.3rem 0.3rem 0.6rem var(--neuEscuro-dark),
-    -0.2rem -0.2rem 0.5rem var(--neuClaro-dark);
-  --neuInnerShadow: inset 0.2rem 0.2rem 0.5rem var(--neuEscuro),
-    inset 0.2rem 0.2rem 0.5rem var(--neuClaro);
-  --neuInnerShadow-dark: inset 0.2rem 0.2rem 0.5rem var(--neuEscuro-dark),
-    inset 0.2rem 0.2rem 0.5rem var(--neuClaro-dark);
+
+  // -- light theme --
+  --neu-light: var(--color-white-100);
+  --neu-light-200: var(--color-white-300);
+  --neu-light-border: 1px solid rgba(0, 0, 0, 0.06);
+  --neu-light-shadow: 0.3rem 0.3rem 0.6rem var(--neu-light-200),
+    -0.2rem -0.2rem 0.5rem var(--neu-light);
+  --neu-light-shadow-inset: inset 0.2rem 0.2rem 0.5rem var(--neu-light-200),
+    inset 0.2rem 0.2rem 0.5rem var(--neu-light);
+
+  // -- dark theme --
+  --neu-dark: var(--color-blue-400);
+  --neu-dark-200: #01090c;
+  --neu-dark-border: 1px solid rgba(255, 255, 255, 0.06);
+  --neu-dark-shadow: 0.3rem 0.3rem 0.6rem var(--neu-dark-200),
+    -0.2rem -0.2rem 0.5rem var(--neu-dark);
+  --neu-dark-shadow-inset: inset 0.2rem 0.2rem 0.5rem var(--neu-dark-200),
+    inset 0.2rem 0.2rem 0.5rem var(--neu-dark);
 }

@@ -22,7 +22,7 @@ export default function BtnMobile({ isOpen, setIsOpen }) {
       onClick={handleClick}
       aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
     >
-      <div className={styles.icon}></div>
+      <div className={`${styles.icon} ${isOpen && styles.open}`}></div>
     </button>
   );
 }
