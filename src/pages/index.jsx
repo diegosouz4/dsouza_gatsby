@@ -3,6 +3,8 @@ import React from "react";
 import Seo from "../components/Seo";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import HeroHome from "../components/HeroHome/HeroHome";
+import SlideSkills from "../components/SlideSkills/SlideSkills";
 
 export default function HomePage() {
   const { projetos } = useStaticQuery(queryProjetos);
@@ -11,9 +13,10 @@ export default function HomePage() {
 
   return (
     <LayoutDefault>
-      <h1>Home page</h1>
+      <HeroHome />
+      <SlideSkills />
 
-      <h2>Meus projetos</h2>
+      {/* <h2>Meus projetos</h2>
       {projetos.nodes.map((projeto) => (
         <div key={projeto.slug}>
           <GatsbyImage
@@ -28,7 +31,7 @@ export default function HomePage() {
           </div>
           <Link to={`/projetos/${projeto.slug}`}>Ver projeto</Link>
         </div>
-      ))}
+      ))} */}
     </LayoutDefault>
   );
 }

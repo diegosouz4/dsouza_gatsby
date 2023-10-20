@@ -1,4 +1,9 @@
 .app {
+  --color-primary: var(--color-yellow-main);
+  --color-primary-dark: var(--color-yellow-300);
+
+  --slide-skills: var(--color-white-300);
+
   --bg-color: var(--color-white-100);
 
   --menu-bg: var(--color-white-100);
@@ -6,25 +11,27 @@
   --menu-links-hover: var(--color-white-200);
   --menu-active: var(--color-blue-main);
   --menu-active-link: var(--color-white-100);
-  
+
   --support-color: var(--color-blue-main);
   --neu-color-main: var(--neu-light);
   --neu-color-border: var(--neu-light-border);
   --neu-color-dark: var(--neu-light-200);
   --neu-color-shadow: var(--neu-light-shadow);
   --neu-color-shadow-inset: var(--neu-light-shadow-inset);
-  
+
   background-color: var(--bg-color);
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  
+
   display: grid;
   grid-template-rows: auto 1fr auto;
-  
+
   &.dark {
+    --slide-skills: var(--color-blue-400);
+
     --bg-color: var(--color-blue-500);
-    
+
     --menu-bg: var(--color-blue-400);
     --menu-links: var(--color-blue-200);
     --menu-links-hover: var(--color-blue-300);
