@@ -13,12 +13,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--support-color);
+      color: var(--color-support);
 
       &:hover,
       &:focus {
         svg {
-          transform: translate3d(0, -5px, 0);
+          transform: scale(1.03);
+          path,
+          circle {
+            fill: var(--color-yellow-main);
+          }
         }
       }
 
@@ -35,6 +39,7 @@
 
         position: relative;
         transition: var(--pop);
+        transform-origin: center;
       }
     }
 

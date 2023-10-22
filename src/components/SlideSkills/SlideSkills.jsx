@@ -17,7 +17,7 @@ import { FaBolt } from "@react-icons/all-files/fa/FaBolt";
 
 export default function SlideSkills() {
   return (
-    <div className={styles.wrapper} aria-hidden>
+    <div className={`${styles.wrapper} fadeIn`} aria-hidden>
       <div className={styles.list}>
         <div><FaHtml5/></div>
         <div>HTML</div>

@@ -8,7 +8,7 @@ export default function NavBar({isOpen}) {
   return (
     <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
       {links.map((link, index) => (
-        <Link key={index} activeClassName={`${styles.active}`} to={`/${link.toLowerCase()}`}>
+        <Link key={index} activeClassName={`${styles.active}`} className={`${index === links.length - 1 ? styles.btn : ''} fadeIn`} to={`/${link.toLowerCase()}`}>
           {link}
         </Link>
       ))}

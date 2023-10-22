@@ -5,6 +5,7 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import HeroHome from "../components/HeroHome/HeroHome";
 import SlideSkills from "../components/SlideSkills/SlideSkills";
+import About from "../components/About/About";
 
 export default function HomePage() {
   const { projetos } = useStaticQuery(queryProjetos);
@@ -15,6 +16,7 @@ export default function HomePage() {
     <LayoutDefault>
       <HeroHome />
       <SlideSkills />
+      <About />
 
       {/* <h2>Meus projetos</h2>
       {projetos.nodes.map((projeto) => (

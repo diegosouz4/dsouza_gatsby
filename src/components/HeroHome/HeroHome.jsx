@@ -6,7 +6,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 export default function HeroHome() {
   return (
     <section className={styles.hero} aria-label='hero'>
-      <div className={`${styles.container} container`}>
+      <div className={`${styles.container} container fadeInUp`}>
         <div className={styles.content}>
           <h2>Olá! Meu nome é</h2>
           <h1>Diego <br/>Souza</h1>
@@ -18,7 +18,7 @@ export default function HeroHome() {
           </div>
         </div>
 
-        <StaticImage aria-hidden className={styles.img} src='../../assets/img/dsouza-hero-image.png' alt='Diego Souza designer e desenvolvedor front-end' />
+        <StaticImage aria-hidden placeholder='none' className={styles.img} src='../../assets/img/dsouza-hero-image.png' alt='Diego Souza designer e desenvolvedor front-end' />
       </div>
     </section>
   )

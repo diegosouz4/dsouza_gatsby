@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`${styles.container} container`}>
-        <Link to="/" className={styles.logo} aria-label="Voltar para a home">
+        <Link to="/" className={`${styles.logo} fadeInLeft`} aria-label="Voltar para a home">
           <Logo />
         </Link>
         <NavBar isOpen={isOpen} />

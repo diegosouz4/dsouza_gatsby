@@ -1,10 +1,16 @@
+//Layout colors theme
 .app {
+  --bg-color: var(--color-white-100);
+
   --color-primary: var(--color-yellow-main);
   --color-primary-dark: var(--color-yellow-300);
+  --color-support: var(--color-blue-main);
 
   --slide-skills: var(--color-white-300);
 
-  --bg-color: var(--color-white-100);
+  --title-color: var(--color-blue-main);
+  --text-color: var(--color-white-600);
+  --text-accent-color: var(--color-blue-400);
 
   --menu-bg: var(--color-white-100);
   --menu-links: var(--color-blue-400);
@@ -12,13 +18,39 @@
   --menu-active: var(--color-blue-main);
   --menu-active-link: var(--color-white-100);
 
-  --support-color: var(--color-blue-main);
   --neu-color-main: var(--neu-light);
   --neu-color-border: var(--neu-light-border);
   --neu-color-dark: var(--neu-light-200);
   --neu-color-shadow: var(--neu-light-shadow);
   --neu-color-shadow-inset: var(--neu-light-shadow-inset);
 
+  &.dark {
+    --bg-color: var(--color-blue-500);
+
+    --color-support: var(--color-blue-300);
+
+    --slide-skills: var(--color-blue-400);
+
+    --title-color: var(--color-white-200);
+    --text-color: var(--color-white-300);
+    --text-accent-color: var(--color-blue-300);
+
+    --menu-bg: var(--color-blue-400);
+    --menu-links: var(--color-blue-200);
+    --menu-links-hover: var(--color-blue-300);
+    --menu-active: var(--color-blue-200);
+    --menu-active-link: var(--color-blue-400);
+
+    --neu-color-main: var(--neu-dark);
+    --neu-color-border: var(--neu-dark-border);
+    --neu-color-dark: var(--neu-dark-200);
+    --neu-color-shadow: var(--neu-dark-shadow);
+    --neu-color-shadow-inset: var(--neu-dark-shadow-inset);
+  }
+}
+
+//Layout styles
+.app {
   background-color: var(--bg-color);
   width: 100%;
   min-height: 100vh;
@@ -27,22 +59,28 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
 
-  &.dark {
-    --slide-skills: var(--color-blue-400);
+  h2 {
+    color: var(--title-color);
+    font-size: 1.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
 
-    --bg-color: var(--color-blue-500);
+  h3 {
+    font-size: 1.125rem;
+    color: var(--title-color);
+  }
 
-    --menu-bg: var(--color-blue-400);
-    --menu-links: var(--color-blue-200);
-    --menu-links-hover: var(--color-blue-300);
-    --menu-active: var(--color-blue-200);
-    --menu-active-link: var(--color-blue-400);
+  ul,
+  ol {
+    list-style: none;
+  }
 
-    --support-color: var(--color-blue-300);
-    --neu-color-main: var(--neu-dark);
-    --neu-color-border: var(--neu-dark-border);
-    --neu-color-dark: var(--neu-dark-200);
-    --neu-color-shadow: var(--neu-dark-shadow);
-    --neu-color-shadow-inset: var(--neu-dark-shadow-inset);
+  p {
+    color: var(--text-color);
+    strong {
+      font-weight: 600;
+      color: var(--text-accent-color);
+    }
   }
 }
