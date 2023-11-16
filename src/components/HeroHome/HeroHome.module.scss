@@ -1,14 +1,14 @@
 .hero {
   margin: 2.5rem 0 2rem;
   .container {
-    background: var(--color-blue-400);
-    background: linear-gradient(
-      0deg,
-      var(--color-blue-400) 0%,
-      var(--color-blue-300) 100%
-    );
-    border-radius: 0.5rem;
-    box-shadow: -0.5rem 0.75rem 1.25rem -0.25rem rgba(0, 0, 0, 0.35);
+    // background: var(--color-blue-400);
+    // background: linear-gradient(
+    //   0deg,
+    //   var(--color-blue-400) 0%,
+    //   var(--color-blue-300) 100%
+    // );
+    // border-radius: 0.5rem;
+    // box-shadow: -0.5rem 0.75rem 1.25rem -0.25rem rgba(0, 0, 0, 0.35);
     padding: 2.5rem;
 
     @media (min-width: 600px) {
@@ -25,41 +25,41 @@
 
     position: relative;
 
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      height: 100%;
+    // &::before,
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   height: 100%;
 
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    // }
 
-    &::after {
-      background: url(../../assets//img/pattern.png) no-repeat center center;
-      background-size: cover;
-      opacity: 0.3;
-      width: 100%;
-      z-index: 0;
+    // &::after {
+    //   background: url(../../assets//img/pattern.png) no-repeat center center;
+    //   background-size: cover;
+    //   opacity: 0.3;
+    //   width: 100%;
+    //   z-index: 0;
 
-      animation: pulse 8s linear infinite;
-    }
+    //   animation: pulse 8s linear infinite;
+    // }
 
-    &::before {
-      background: linear-gradient(
-        90deg,
-        rgba(37, 55, 81, 0.8) 55%,
-        rgba(37, 55, 81, 0) 100%
-      );
-      border-radius: 0.5rem 0 0 0.5rem;
-      width: 80%;
-      z-index: 2;
+    // &::before {
+    //   background: linear-gradient(
+    //     90deg,
+    //     rgba(37, 55, 81, 0.8) 55%,
+    //     rgba(37, 55, 81, 0) 100%
+    //   );
+    //   border-radius: 0.5rem 0 0 0.5rem;
+    //   width: 80%;
+    //   z-index: 2;
 
-      @media (min-width: 850px) {
-        width: 65%;
-      }
-    }
+    //   @media (min-width: 850px) {
+    //     width: 65%;
+    //   }
+    // }
 
     .content {
       width: 100%;
@@ -139,6 +139,76 @@
         display: block;
       }
     }
+
+    .background {
+      background: var(--color-blue-400);
+      background: linear-gradient(
+        0deg,
+        var(--color-blue-400) 0%,
+        var(--color-blue-300) 100%
+      );
+      border-radius: 0.5rem;
+      box-shadow: -0.5rem 0.75rem 1.25rem -0.25rem rgba(0, 0, 0, 0.35);
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        background: url(../../assets//img/pattern.png) no-repeat center center;
+        background-size: cover;
+        opacity: 0.3;
+        width: 100%;
+        z-index: 0;
+
+        animation: pulse 8s linear infinite;
+      }
+
+      &::before {
+        background: linear-gradient(
+          90deg,
+          rgba(37, 55, 81, 0.8) 55%,
+          rgba(37, 55, 81, 0) 100%
+        );
+        border-radius: 0.5rem 0 0 0.5rem;
+        width: 80%;
+        z-index: 2;
+
+        @media (min-width: 850px) {
+          width: 65%;
+        }
+      }
+
+      .flareRight {
+        top: 0;
+        right: 0;
+        transform: translate(250px, -200px);
+        z-index: 2;
+        animation: flarePulseRight 20s linear infinite alternate;
+      }
+
+      .flareLeft {
+        bottom: 0;
+        left: 0;
+        transform: translate(-250px, 200px);
+        z-index: 2;
+        animation: flarePulseLeft 20s linear infinite alternate;
+      }
+    }
   }
 }
 
@@ -149,10 +219,40 @@
   }
   50% {
     opacity: 0.1;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     opacity: 0.3;
     transform: scale(1);
+  }
+}
+
+@keyframes flarePulseRight {
+  0% {
+    opacity: 1;
+    transform: translate(250px, -200px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(250px, -200px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(250px, -200px) scale(1);
+  }
+}
+
+@keyframes flarePulseLeft {
+  0% {
+    opacity: 1;
+    transform: translate(-250px, 200px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-250px, 200px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-250px, 200px) scale(1);
   }
 }

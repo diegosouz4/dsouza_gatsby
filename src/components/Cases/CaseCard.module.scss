@@ -1,0 +1,54 @@
+.wrapper {
+  box-sizing: border-box;
+  flex: 0 0 300px;
+  padding: 0.3125rem;
+
+  position: relative;
+  transition: 300ms ease;
+  &:hover, &:focus{
+    transform: scale(1.02);
+  }
+
+
+  .card {
+    background-color: var(--cards-bg);
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 0.625rem;
+
+    .thumb {
+      border-radius: 0.5rem;
+      pointer-events: none;
+    }
+
+    .content {
+      padding: 1rem 0;
+      text-align: center;
+
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .tags {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+
+        span {
+          // color: var();
+          font-size: 0.75rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

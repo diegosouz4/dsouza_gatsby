@@ -23,6 +23,9 @@
 
   --box-shadow: 0.25rem 1rem 2rem -5rem rgba(37, 55, 81, 0.2);
 
+  //Gradients
+  --flare-effect: radial-gradient(50% 50% at 50% 50%, #2c77e1 0%, rgba(58, 93, 142, 0) 100%);
+
   //Animate
   --pop: 250ms cubic-bezier(1, -0.01, 0.19, 1.47);
   --pop-slow: 1s cubic-bezier(1, -0.01, 0.19, 1.47);

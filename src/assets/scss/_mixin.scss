@@ -1,0 +1,17 @@
+@mixin scrollBar(
+  $tumbColor: var(--color-white),
+  $bgColor: var(--color-blue-400)
+) {
+  &::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $bgColor;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $tumbColor;
+    border: 2px solid $bgColor;
+  }
+}

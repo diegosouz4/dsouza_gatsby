@@ -1,0 +1,25 @@
+.patterns {
+  color: var(--circlePatters);
+  animation: doaBarrelRoll 20s linear infinite alternate;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 25rem;
+
+  overflow: hidden;
+  position: absolute;
+
+
+  path, circle{
+    fill: currentColor;
+  }
+}
+
+@keyframes doaBarrelRoll {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

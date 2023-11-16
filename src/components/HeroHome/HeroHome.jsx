@@ -2,6 +2,7 @@ import React from 'react'
 import * as styles from './HeroHome.module.scss';
 import { LinkButtonFill, LinkButtonLine } from '../LinkButton/LinkButton';
 import { StaticImage } from 'gatsby-plugin-image';
+import FlareEffect from '../Effects/FlareEffect/FlareEffect';
 
 export default function HeroHome() {
   return (
@@ -19,6 +20,11 @@ export default function HeroHome() {
         </div>
 
         <StaticImage aria-hidden placeholder='none' className={styles.img} src='../../assets/img/dsouza-hero-image.png' alt='Diego Souza designer e desenvolvedor front-end' />
+        
+        <div className={styles.background}>
+          <FlareEffect className={styles.flareRight} />
+          <FlareEffect className={styles.flareLeft} />
+        </div>
       </div>
     </section>
   )

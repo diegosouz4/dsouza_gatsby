@@ -15,6 +15,7 @@ export const ThemeProvider = ({ children }) => {
 
   React.useEffect(() => {
     const local = JSON.parse(localStorage.getItem("theme")) || undefined;
+
     if (local) {
       setTheme(local);
       return;
@@ -25,6 +26,7 @@ export const ThemeProvider = ({ children }) => {
 
   React.useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme));
+    document.querySelector("body").dataset.theme = theme;
   }, [theme]);
 
   return (

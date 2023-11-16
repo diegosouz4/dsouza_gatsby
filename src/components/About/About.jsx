@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import {FaCode} from '@react-icons/all-files/fa/FaCode';
 import { FaDrawPolygon } from "@react-icons/all-files/fa/FaDrawPolygon";
 import * as style from "./About.module.scss";
+import CircularPatterns from '../Effects/CircularPatterns/CircularPatterns';
 
 export default function About() {
   const { about, skills } = useStaticQuery(graphql`
@@ -56,6 +57,9 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <CircularPatterns className={style.leftPattern} />
+      <CircularPatterns className={style.rightPattern} />
     </section>
   );
 }

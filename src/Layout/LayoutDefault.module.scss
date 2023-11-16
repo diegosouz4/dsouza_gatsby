@@ -1,10 +1,13 @@
 //Layout colors theme
 .app {
   --bg-color: var(--color-white-100);
+  --bg-section-cases: var(--color-blue-100);
 
   --color-primary: var(--color-yellow-main);
   --color-primary-dark: var(--color-yellow-300);
   --color-support: var(--color-blue-main);
+
+  --cards-bg: var(--color-white-100);
 
   --slide-skills: var(--color-white-300);
 
@@ -24,10 +27,15 @@
   --neu-color-shadow: var(--neu-light-shadow);
   --neu-color-shadow-inset: var(--neu-light-shadow-inset);
 
+  --circlePatters: var(--color-white-300);
+
   &.dark {
     --bg-color: var(--color-blue-500);
+    --bg-section-cases: #1E2938;
 
     --color-support: var(--color-blue-300);
+
+    --cards-bg: var(--color-blue-400);
 
     --slide-skills: var(--color-blue-400);
 
@@ -46,6 +54,8 @@
     --neu-color-dark: var(--neu-dark-200);
     --neu-color-shadow: var(--neu-dark-shadow);
     --neu-color-shadow-inset: var(--neu-dark-shadow-inset);
+
+    --circlePatters: var(--color-blue-300);
   }
 }
 
@@ -82,5 +92,27 @@
       font-weight: 600;
       color: var(--text-accent-color);
     }
+  }
+}
+
+body {
+  --bgtheme: var(--color-white-100);
+  --thumbTheme: var(--color-blue-main);
+  &[data-theme="dark"] {
+    --bgtheme: var(--color-blue-500);
+    --thumbTheme: var(--color-blue-300);
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--bgtheme);
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumbTheme);
+    border: 2px solid var(--bgtheme);
   }
 }

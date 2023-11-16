@@ -17,11 +17,7 @@ export default function BtnMobile({ isOpen, setIsOpen }) {
   }, [isOpen]);
 
   return (
-    <button
-      className={styles.btn}
-      onClick={handleClick}
-      aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-    >
+    <button className={styles.btn} onClick={handleClick} aria-label={isOpen ? "Fechar menu" : "Abrir menu"}>
       <div className={`${styles.icon} ${isOpen && styles.open}`}></div>
     </button>
   );

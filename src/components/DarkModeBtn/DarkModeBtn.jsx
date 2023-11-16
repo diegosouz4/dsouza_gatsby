@@ -14,12 +14,7 @@ export default function DarkModeBtn() {
   }, [theme, label]);
 
   return (
-    <button
-      className={`${styles.btn} ${theme === "dark" ? styles.dark : ""} fadeInRight`}
-      onClick={toggeTheme}
-      title={label}
-      aria-label={label}
-    >
+    <button className={`${styles.btn} ${theme === "dark" ? styles.dark : ""} fadeInRight`} onClick={toggeTheme} title={label} aria-label={label}>
       <DarkmodeIcon clasName={styles.icon} />
     </button>
   );

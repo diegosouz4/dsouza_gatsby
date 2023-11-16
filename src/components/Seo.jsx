@@ -12,7 +12,7 @@ export default function Seo({ title, description, pathname, children }) {
   } = useSiteMetadata();
 
   const seoData = {
-    title: `${title} | Diego Souza desenvolvedor front-end` || defaultTitle,
+    title: title ? `${title} | Diego Souza desenvolvedor front-end` : defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ""}`,
     image: image,
