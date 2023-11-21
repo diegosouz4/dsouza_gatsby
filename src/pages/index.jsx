@@ -6,6 +6,7 @@ import HeroHome from "../components/HeroHome/HeroHome";
 import SlideSkills from "../components/SlideSkills/SlideSkills";
 import About from "../components/About/About";
 import Cases from "../components/Cases/Cases";
+import Partner from '../components/Partner/Partner';
 
 export default function HomePage() {
   const { projetos } = useStaticQuery(queryProjetos);
@@ -16,6 +17,7 @@ export default function HomePage() {
       <SlideSkills />
       <About />
       { projetos && <Cases projetos={projetos} />}
+      <Partner />
     </LayoutDefault>
   );
 }

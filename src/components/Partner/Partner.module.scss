@@ -1,0 +1,39 @@
+.section {
+  padding: 2.5rem 0;
+  .container {
+    max-width: 1200px;
+    overflow: hidden;
+
+    img,
+    svg {
+      display: block;
+      width: 100%;
+      max-width: 130px;
+      height: auto;
+      pointer-events: none;
+      margin: 0 auto;
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      li {
+        flex: 0 0 200px;
+        text-align: center;
+        opacity: 0.85;
+
+        filter: grayscale(1);
+
+        transition: 300ms ease-in-out;
+        &:hover,
+        &:focus {
+          filter: grayscale(0);
+        }
+
+        .baseColor {
+          fill: var(--color-white-100);
+        }
+      }
+    }
+  }
+}

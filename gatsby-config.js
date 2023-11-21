@@ -10,6 +10,7 @@ module.exports = {
     title: `Diego Souza | desenvolvedor front-end`,
     description:
       "Olá, me chamo Diego Souza. Um desenvolvedor front-end carioca e apaixonado por tecnologia.",
+    navLinks: ["Sobre", "Projetos", "Estudos", "Contato"],
   },
   plugins: [
     {
@@ -34,7 +35,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/assets/img/",
+        path: `${__dirname}/src/assets/img/`,
       },
       __key: "images",
     },
@@ -46,14 +47,18 @@ module.exports = {
       },
     },
     {
-      resolve:"gatsby-plugin-google-fonts",
+      resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: [
-          `Fira Sans\:300,400,500,600,800`,
-          `Noto Sans\:300,400,600`,
-        ],
-        display: 'swap'
-      }
-    }
+        fonts: [`Fira Sans\:300,400,500,600,800`, `Noto Sans\:300,400,600`],
+        display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `myimgs`,
+        path: `${__dirname}/src/assets/img`,
+      },
+    },
   ],
 };

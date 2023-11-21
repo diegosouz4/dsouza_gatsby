@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import {FaCode} from '@react-icons/all-files/fa/FaCode';
 import { FaDrawPolygon } from "@react-icons/all-files/fa/FaDrawPolygon";
-import * as style from "./About.module.scss";
+import * as styles from "./About.module.scss";
 import CircularPatterns from '../Effects/CircularPatterns/CircularPatterns';
 
 export default function About() {
@@ -28,23 +28,23 @@ export default function About() {
   const { designer, developer } = skills;
 
   return (
-    <section className={style.about} aria-label="sobre">
-      <div className={`${style.container} container`}>
-        <div className={style.thumb}>
+    <section className={styles.about} aria-label="sobre">
+      <div className={`${styles.container} container`}>
+        <div className={styles.thumb}>
           <StaticImage
             src="../../assets/img/dsouza-about-thumb.png"
             alt="Diego Souza thumb"
             aria-hidden
             placeholder="none"
-            className={style.img}
+            className={styles.img}
           />
         </div>
 
-        <div className={style.content}>
+        <div className={styles.content}>
           <h2>Sobre <strong>mim</strong></h2>
           {about && <p dangerouslySetInnerHTML={{ __html: about }}></p>}
 
-          <div className={style.skills}>
+          <div className={styles.skills}>
             <div className="dev">
               <h3><FaCode />{developer.title}</h3>
               <ul>{developer.tags.map((tag) => (<li key={tag}>{tag}</li>))}</ul>
@@ -58,8 +58,8 @@ export default function About() {
         </div>
       </div>
 
-      <CircularPatterns className={style.leftPattern} />
-      <CircularPatterns className={style.rightPattern} />
+      <CircularPatterns className={styles.leftPattern} />
+      <CircularPatterns className={styles.rightPattern} />
     </section>
   );
 }

@@ -1,14 +1,22 @@
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import * as styles from './NavBar.module.scss';
 
-const links = ["Sobre", "Projetos", "Estudos", "Contato"];
-
 export default function NavBar({isOpen}) {
+  const {navLinks} = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          navLinks
+        }
+      }
+    }
+  `).site.siteMetadata;
+
   return (
     <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
-      {links.map((link, index) => (
-        <Link key={index} activeClassName={`${styles.active}`} className={`${index === links.length - 1 ? styles.btn : ''} fadeIn`} to={`/${link.toLowerCase()}`}>
+      {navLinks.map((link, index) => (
+        <Link key={index} activeClassName={`${styles.active}`} className={`${index === navLinks.length - 1 ? styles.btn : ''} fadeIn`} to={`/${link.toLowerCase()}`}>
           {link}
         </Link>
       ))}
