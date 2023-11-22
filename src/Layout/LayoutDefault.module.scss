@@ -32,9 +32,18 @@
 
   --circlePatters: var(--color-white-300);
 
+  --slide-dots: var(--color-white-200);
+  --slide-dots-active: var(--color-blue-300);
+  --slider-btn-border: 1px solid rgba(0, 0, 0, 0.2);
+  --slider-btn-arrow: var(--color-blue-400);
+  --slider-card-border: var(--color-white-300);
+  --slide-quote: var(--color-blue-400);
+  --slide-name: var(--color-blue-300);
+  --slide-role: var(--color-white-600);
+
   &.dark {
     --bg-color: var(--color-blue-500);
-    --bg-section-cases: #1E2938;
+    --bg-section-cases: #1e2938;
 
     --color-support: var(--color-blue-300);
 
@@ -62,6 +71,15 @@
     --neu-color-shadow-inset: var(--neu-dark-shadow-inset);
 
     --circlePatters: var(--color-blue-400);
+
+    --slide-dots: var(--color-blue-400);
+    --slide-dots-active: var(--color-blue-200);
+    --slider-btn-border: 1px solid rgba(255, 255, 255, 0.2);
+    --slider-btn-arrow: var(--color-blue-300);
+    --slider-card-border: var(--color-blue-300);
+    --slide-quote: var(--color-white-100);
+    --slide-name: var(--color-blue-200);
+    --slide-role: var(--color-white-300);
   }
 }
 

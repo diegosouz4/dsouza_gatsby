@@ -28,8 +28,19 @@
 
     .logo {
       display: inline-block;
-      margin-top: 1.5rem;
+      margin-top: 2.5rem;
       color: var(--footer-text);
+
+      &:hover,
+      &:focus {
+        svg {
+          transform: scale(1.03);
+          path,
+          circle {
+            fill: var(--color-yellow-main);
+          }
+        }
+      }
 
       svg {
         color: currentColor;
@@ -37,6 +48,10 @@
         width: 100%;
         max-width: 5rem;
         height: auto;
+
+        position: relative;
+        transition: var(--pop);
+        transform-origin: center;
 
         path,
         circle {
@@ -133,7 +148,7 @@
           svg {
             color: currentColor;
             display: block;
-            width: 1.25rem;
+            width: 1.125rem;
             height: auto;
 
             path,

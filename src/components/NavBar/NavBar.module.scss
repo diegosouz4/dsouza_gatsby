@@ -1,6 +1,6 @@
 .nav {
   a {
-    color: var(--color-blue-300);
+    color: var(--menu-links );
     font-family: inherit;
     font-size: 1rem;
     text-decoration: none;
@@ -118,7 +118,7 @@
         &:focus,
         &:hover {
           background-color: var(--color-blue-300);
-          color: var(--color-blue-500);
+          color: var(--color-white-100);
           transform: scale(1.03);
         }
       }

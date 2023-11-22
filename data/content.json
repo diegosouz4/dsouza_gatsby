@@ -94,7 +94,22 @@
       "name": "Leonardo Borba",
       "role": "Publicitário",
       "quote": "Diego tem uma qualidade rara que é o senso estético e habilidade de designer somada ao conhecimento de programação de front end. Isso ajuda demais na execução de qualquer projeto online."
-    }
+    },
+    {
+      "name": "Ana Souza",
+      "role": "Empresária",
+      "quote": "O Diego superou minhas expectativas! O site de nossa loja agora reflete a essência da marca, proporcionando uma experiência incrível aos clientes."
+    },
+    {
+      "name": "Gabriel Lima",
+      "role": "Consultor de Marketing",
+      "quote": "Trabalhar com o Diego foi uma escolha acertada. Ele transformou nossas ideias em um site moderno e funcional. A atenção aos detalhes faz toda diferença!"
+    },
+    {
+      "name": "Mariana Oliveira",
+      "role": "CEO",
+      "quote": "Diego captou perfeitamente minha identidade online. Meu novo site é intuitivo, elegante e se destaca. Estou encantada com o profissionalismo e a dedicação."
+    }   
   ],
   "study": {
     "title": "Sei que há um longo caminho a percorrer para atingir o meu objetivo de me tornar um desenvolvedor full-stack. Por isso, estou sempre buscando aprender novas tecnologias. Nesta página, mostro os meus repositórios git."

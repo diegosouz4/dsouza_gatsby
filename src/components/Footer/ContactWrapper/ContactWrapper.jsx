@@ -9,7 +9,7 @@ export default function ContactWrapper({className}) {
     <div className={`${className} ${styles.wrapper}`}>
       <div className={styles.content}>
         <h2>Vamos <strong>Conversar?</strong></h2>
-        <p>Vamos tirar a sua ideia do papel?</p>
+        <p>Pronto para tirar a sua ideia do papel?</p>
         <LinkButtonLine className={styles.btn} path="/contato">Conversar</LinkButtonLine>
       </div>
 
