@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
 
-  svg {
+  .icon {
     path,
     circle {
       fill: var(--color-support);
@@ -36,7 +36,7 @@
   }
 
   &.dark {
-    svg {
+    .icon {
       path {
         &:first-child {
           transform: rotate(0.5turn);
