@@ -1,5 +1,8 @@
 .about {
-  padding: 3.75rem 0;
+  padding: 2.5rem 0;
+  @media (min-width: 800px) {
+    padding: 3.75rem 0;
+  }
   position: relative;
 
   .container {
@@ -15,6 +18,11 @@
     & > div {
       @media (max-width: 800px) {
         width: 100%;
+        &.content {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
       @media (min-width: 800px) {
         flex: 1;
@@ -36,28 +44,27 @@
     }
 
     .content {
-      h2 {
-        @media (max-width: 600px) {
-          text-align: center;
-        }
-      }
-
       p {
         max-width: 50ch;
         line-height: 1.45;
+        @media (max-width: 640px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
 
       .skills {
         margin-top: 1.5rem;
         & > div {
           & + div {
-            margin-top: 1.5rem;
+            margin-top: 2.5rem;
           }
         }
 
         h3 {
           display: flex;
           gap: 0.3125rem;
+          margin-bottom: 1.25rem;
 
           svg {
             font-size: 1.125rem;

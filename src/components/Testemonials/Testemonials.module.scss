@@ -123,15 +123,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.625rem;
+      gap: 1rem;
+      @media (min-width: 768px) {
+        gap: 0.625rem;
+      }
 
       button {
         border-radius: 50%;
         color: var(--slide-dots);
         cursor: pointer;
         display: block;
-        width: 0.625rem;
-        height: 0.625rem;
+        width: 0.75rem;
+        height: 0.75rem;
         background-color: currentColor;
         overflow: hidden;
         padding: 0;
