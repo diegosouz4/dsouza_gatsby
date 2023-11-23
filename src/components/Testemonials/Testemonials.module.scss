@@ -25,6 +25,14 @@
       max-width: 600px;
       margin: 0 auto;
 
+      &:hover {
+        cursor: grab;
+      }
+
+      &.drag{
+        cursor: grabbing;
+      }
+
       @media (max-width: 610px) {
         width: 90vw;
       }
