@@ -6,7 +6,7 @@ import { useTheme } from "../contexts/ThemeContext";
 import Footer from "../components/Footer/Footer";
 
 export default function LayoutDefault({ children }) {
-  const { theme } = useTheme();
+  const {theme} = useTheme();
 
   return (
     <div className={`${styles.app} ${theme === "dark" ? styles.dark : ""}`}>

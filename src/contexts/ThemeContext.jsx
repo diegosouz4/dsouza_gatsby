@@ -1,10 +1,9 @@
 import React from "react";
 
+const isBrowser = typeof window !== "undefined";
 const ThemeContext = React.createContext();
-const isDark =
-  window.matchMedia("(prefers-color-scheme: dark)").matches === true
-    ? "dark"
-    : "light";
+const isDark = isBrowser ? window.matchMedia("(prefers-color-scheme: dark)").matches === true
+  ? "dark" : "light" : 'dark';
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = React.useState("light");
@@ -14,7 +13,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   React.useEffect(() => {
-    const local = JSON.parse(localStorage.getItem("theme")) || undefined;
+    const local = isBrowser && window.localStorage ? JSON.parse(window.localStorage.getItem("theme")) : undefined;
 
     if (local) {
       setTheme(local);
@@ -25,8 +24,11 @@ export const ThemeProvider = ({ children }) => {
   }, []);
 
   React.useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
-    document.querySelector("body").dataset.theme = theme;
+    if(isBrowser) {
+      window.localStorage.setItem("theme", JSON.stringify(theme));
+      document.querySelector("body").dataset.theme = theme;
+    }
+
   }, [theme]);
 
   return (

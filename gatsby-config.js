@@ -12,6 +12,9 @@ module.exports = {
       "Olá, me chamo Diego Souza. Um desenvolvedor front-end carioca e apaixonado por tecnologia.",
     navLinks: ["Sobre", "Projetos", "Estudos", "Contato"],
   },
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",

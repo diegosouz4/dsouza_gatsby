@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import * as styles from './ContactWrapper.module.scss';
 import FlareEffect from "../../Effects/FlareEffect/FlareEffect";

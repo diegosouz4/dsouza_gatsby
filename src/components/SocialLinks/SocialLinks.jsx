@@ -6,7 +6,7 @@ export default function SocialLinks({className}) {
 
   return (
     <ul className={className}>
-      {social.map(({name, url, icon, show}) => show ? <li key={name}><a href={url} target="_blank" rel="noreferrer" title={name} dangerouslySetInnerHTML={{__html: icon}}></a></li> : '')}
+      {social.map(({name, url, icon, show}) => show ? <li key={name}><a href={url} target="_blank" rel="noreferrer" title={name} aria-label={name} dangerouslySetInnerHTML={{__html: icon}}></a></li> : '')}
     </ul>
   );
 }

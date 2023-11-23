@@ -26,7 +26,7 @@ export default function Cases({ projetos }) {
     // setSliderWidth(sliderRef.current.scrollWidth - sliderRef.current.offsetWidth);
     console.log(Math.floor(activeItem));
     setSliderWidth(activeItem);
-  }, []);
+  }, [projetos.nodes.length]);
 
   React.useEffect(() => {
     const activeItem = ActiveRef.current.filter((item) => item.dataset.caseactive !== undefined)[0];
