@@ -12,21 +12,26 @@ export default function Testemonials() {
   const { testemonials } = useStaticQuery(query).dataJson;
 
   function handleNextItem(){
-    setItemActive((prev) => prev + 1 === testemonials.length ? 0 : prev + 1);
+    setItemActive((prev) => prev + 1 === testemonials.length ? testemonials.length - 1 : prev + 1);
   }
 
   function handlePrevItem(){
-    setItemActive((prev) => prev - 1 < 0 ? testemonials.length - 1 : prev - 1);
+    setItemActive((prev) => prev - 1 < 0 ? 0 : prev - 1);
   }
 
   function initDragSlider(event){
+    const clientX = event.type === 'mousedown' ? event.clientX : event.type === 'touchstart' ? event.targetTouches[0].clientX : null;
+    if(!clientX) return
+
     setInitSliderDrag(true);
-    setSliderPosiion((prev) => {return {...prev, startX: event.clientX, finalX: 0}});
+    setSliderPosiion((prev) => {return {...prev, startX: clientX, finalX: 0}});
   }
 
-  function handleMouseMove(event){
-    if(!initSliderDrag) return;
-    setSliderPosiion((prev) => {return {...prev, movement: sliderPosiion.startX - event.clientX}});
+  function handleDragMove(event){
+    const clientX = event.type === 'mousemove' ? event.clientX : event.type === 'touchmove' ? event.targetTouches[0].clientX : null;
+    if(!initSliderDrag || !clientX) return;
+    
+    setSliderPosiion((prev) => {return {...prev, movement: sliderPosiion.startX - clientX}});
   }
 
   function endDragSlider(){
@@ -49,7 +54,15 @@ export default function Testemonials() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
 
         <div className={styles.wrapper}>
-          <ul className={`${styles.slider} ${initSliderDrag ? styles.drag : ''}`} onMouseDown={initDragSlider} onMouseMove={handleMouseMove} onMouseLeave={endDragSlider} onMouseUp={endDragSlider}>
+          <ul className={`${styles.slider} ${initSliderDrag ? styles.drag : ''}`}
+            onMouseDown={initDragSlider}
+            onMouseMove={handleDragMove}
+            onMouseLeave={endDragSlider}
+            onMouseUp={endDragSlider}
+            onTouchStart={initDragSlider}
+            onTouchMove={handleDragMove}
+            onTouchEnd={endDragSlider}
+          >
             {testemonials.map((testemonial, index) => <li className={index === itemActive ? styles.active : ''} key={testemonial.name} style={{transform: `translate3D(-${100 * itemActive}%, 0, 0)`}} aria-hidden={index !== itemActive ? true : false}><CardTestemonial info={testemonial} /></li>)}
           </ul>
 
