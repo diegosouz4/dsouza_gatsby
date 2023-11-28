@@ -12,13 +12,19 @@
     .currently {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2rem;
 
       .item {
-        display: grid;
-        gap: 0.3125rem 0.625rem;
-        grid-template-columns: minmax(auto, 100px) 1fr;
-        grid-template-rows: auto 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+
+        @media (min-width: 600px) {
+          display: grid;
+          gap: 0.3125rem 0.625rem;
+          grid-template-columns: minmax(auto, 150px) 1fr;
+          grid-template-rows: auto 1fr;
+        }
 
         h3,
         h4,
@@ -30,23 +36,21 @@
 
         .role {
           color: var(--currently-role);
-          font-size: 1.125rem;
+          font-size: 1.5rem;
           font-weight: 600;
-          grid-column: 2/-1;
-          grid-row: 1/2;
+
+          @media (min-width: 600px) {
+            font-size: 1.125rem;
+            grid-column: 2/-1;
+          }
         }
 
         .company {
           color: var(--currently-company);
           font-size: 1rem;
           font-weight: 600;
-          grid-column: 1/2;
-          grid-row: 1/-1;
           letter-spacing: 0;
           text-align: right;
-
-          border-right: var(--currently-border);
-          padding-right: 0.625rem;
 
           .range {
             color: var(--currently-range);
@@ -56,14 +60,42 @@
             line-height: 1.4;
             margin-top: 0.3125rem;
           }
+          
+          @media (min-width: 600px) {
+            border-right: var(--currently-border);
+            grid-column: 1/2;
+            grid-row: 1/-1;
+            padding-right: 0.625rem;
+          }
+
+          @media (max-width: 600px) {
+            font-size: 1.125rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: var(--currently-border);
+            border-bottom: var(--currently-border);
+            padding: 0.625rem;
+            .range {
+              display: inline-block;
+              font-size: 1rem;
+              margin: 0;
+            }
+          }
         }
 
         .description {
           color: var(--currently-description);
-          font-size: 0.875rem;
-          line-height: 1.45;
-          grid-column: 2/-1;
-          grid-row: 2/-1;
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.5;
+          
+          @media (min-width: 600px) {
+            font-size: 0.875rem;
+            grid-column: 2/-1;
+            grid-row: 2/-1;
+            line-height: 1.45;
+          }
         }
       }
     }
