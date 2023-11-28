@@ -41,6 +41,12 @@
   --slide-name: var(--color-blue-300);
   --slide-role: var(--color-white-600);
 
+  --currently-role: var(--color-blue-400);
+  --currently-company: var(--color-white-400);
+  --currently-range: var(--color-white-400);
+  --currently-description: var(--color-white-600);
+  --currently-border: 1px solid rgba(0, 0, 0, 0.1);
+
   &.dark {
     --bg-color: var(--color-blue-500);
     --bg-section-cases: #1e2938;
@@ -80,6 +86,12 @@
     --slide-quote: var(--color-white-100);
     --slide-name: var(--color-blue-200);
     --slide-role: var(--color-white-300);
+
+    --currently-role: var(--color-blue-200);
+    --currently-company: var(--color-white-300);
+    --currently-range: var(--color-white-300);
+    --currently-description: var(--color-white-200);
+    --currently-border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 

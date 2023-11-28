@@ -1,0 +1,215 @@
+.hero {
+  margin: 2.5rem 0 2rem;
+  .container {
+    padding: 2.5rem;
+
+    @media (min-width: 600px) {
+      padding: 3.75rem 4rem;
+      min-height: 200px;
+    }
+
+    @media (min-width: 800px) {
+      padding: 3.75rem 5rem;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    .content {
+      text-align: center;
+
+      @media (max-width: 640px) {
+        h1,
+        p {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      position: relative;
+      z-index: 3;
+
+      h1 {
+        color: var(--color-white);
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-bottom: 0.3125rem;
+        text-transform: uppercase;
+
+        @media (min-width: 500px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        li {
+          color: var(--color-white-300);
+
+          p,
+          a {
+            color: currentColor;
+            font-size: 0.875rem;
+            text-transform: capitalize;
+          }
+
+          a {
+            position: relative;
+            transition: 300ms ease-in-out;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+              color: var(--color-blue-200);
+              letter-spacing: 2px;
+              transform: scale(1.4);
+              text-decoration: underline;
+            }
+          }
+
+          p{
+            color: var(--color-white);
+            font-weight: 600;
+          }
+
+          & + li {
+            position: relative;
+
+            &::before {
+              color: currentColor;
+              content: "/";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: -12px;
+            }
+          }
+        }
+      }
+    }
+
+    .background {
+      background: var(--color-blue-400);
+      background: linear-gradient(
+        0deg,
+        var(--color-blue-400) 0%,
+        var(--color-blue-300) 100%
+      );
+      border-radius: 0.5rem;
+      box-shadow: -0.5rem 0.75rem 1.25rem -0.25rem rgba(0, 0, 0, 0.35);
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        background: url(../../assets//img/pattern.png) no-repeat center center;
+        background-size: cover;
+        opacity: 0.2;
+        width: 100%;
+        z-index: 0;
+
+        animation: pulse 8s linear infinite;
+      }
+
+      &::before {
+        background: linear-gradient(
+          90deg,
+          rgba(37, 55, 81, 0.8) 55%,
+          rgba(37, 55, 81, 0) 100%
+        );
+        border-radius: 0.5rem 0 0 0.5rem;
+        width: 80%;
+        z-index: 2;
+
+        @media (min-width: 850px) {
+          width: 65%;
+        }
+      }
+
+      .flareRight {
+        top: 0;
+        right: 0;
+        transform: translate(250px, -200px);
+        z-index: 2;
+        animation: flarePulseRight 20s linear infinite alternate;
+      }
+
+      .flareLeft {
+        bottom: 0;
+        left: 0;
+        transform: translate(-250px, 200px);
+        z-index: 2;
+        animation: flarePulseLeft 20s linear infinite alternate;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+@keyframes flarePulseRight {
+  0% {
+    opacity: 1;
+    transform: translate(250px, -200px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(250px, -200px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(250px, -200px) scale(1);
+  }
+}
+
+@keyframes flarePulseLeft {
+  0% {
+    opacity: 1;
+    transform: translate(-250px, 200px) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-250px, 200px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-250px, 200px) scale(1);
+  }
+}

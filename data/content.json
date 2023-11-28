@@ -36,28 +36,34 @@
   ],
   "currently": [
     {
-      "name": "Neoway",
-      "description": "",
-      "role": "Técnico em Desenvolvimento de Sistemas",
-      "range": "Ago/2022 - Atualmente"
-    },
-    {
-      "name": "Freelancer",
-      "description": "Trabalhando como desenvolvedor freelancer.",
+      "company": "Neoway",
+      "description": "Atuo como desenvolvedor front-end no time de Marketing da principal empresa de inteligência artificial e data analytics do Brasil. Minhas responsabilidades incluem a criação de landing pages para campanhas, a manutenção do blog e site da empresa. Exerço um papel crucial na interligação entre os times de marketing, performance e tecnologia, proporcionando soluções em HTML, CSS, JS e React para as demandas e desafios diários do setor de marketing.",
       "role": "Desenvolvedor front-end",
-      "range": "Ago/2018"
+      "range": "Ago/22 - Atualmente"
     },
     {
-      "name": "Planetário do Rio",
-      "description": "Fui responsável pelo desenvolvimento e manutenção do novo site, criação dos criativos de comunicação e das peças gráficas.",
-      "role": "Designer",
-      "range": "Jan/2022 - Jan/2023"
+      "company": "Freelancer",
+      "description": "Desde 2020, atuo como desenvolvedor front-end freelancer, especializado na criação de landing pages, páginas de vendas, sites institucionais e blogs (WordPress). Aprofundei meu conhecimento no desenvolvimento de e-commerce, participando na criação de lojas virtuais nas plataformas Tray, Vtex e WooCommerce. Durante esse período, trabalhei com diversas tecnologias, incluindo HTML, CSS, JS, React, Redux, Gatsby, WordPress (CMS e headless CMS) e GraphQL.",
+      "role": "Desenvolvedor front-end",
+      "range": "Ago/20"
     },
     {
-      "name": "Poeme-se",
-      "description": "E-commerce de produtos literários. Fui responsável pela manutenção do e-commerce e do blog da empresa. Realização do desenvolvimento de toda a identidade visual da loja e criação das peças das mídias sociais.",
-      "role": "Web designer",
-      "range": "Ago/2018 - Ago/2022"
+      "company": "Planetário do Rio",
+      "description": "Desempenhei a função de designer gráfico na Fundação do Planetário do Rio de Janeiro, liderando a reestruturação do blog/site da instituição. Além de desenvolver peças gráficas e a identidade visual do Planetário, participei na criação das exposições internas. Assumi a responsabilidade pela manutenção do site, otimização de imagens e SEO para aprimorar a visibilidade das matérias. ",
+      "role": "Designer gráfico",
+      "range": "Jan/22 - Dez/22"
+    },
+    {
+      "company": "Poeme-se",
+      "description": "Após dois anos como designer gráfico na Poeme-se, enfrentei o desafio significativo da migração do e-commerce para a Tray. Essa transição proporcionou uma mudança de área, permitindo-me ingressar como desenvolvedor front-end. Assumi a responsabilidade pelo cadastro de produtos no ERP, integração do ERP com a Tray e desenvolvimento do novo site do zero, utilizando as tecnologias HTML, CSS e JS.",
+      "role": "Desenvolvedor front-end",
+      "range": "Out/20 - Ago/22"
+    },
+    {
+      "company": "Poeme-se",
+      "description": "Contribuí como líder na comunicação visual da Poeme-se, a principal grife de produtos literários do Brasil. Coordenava a criação de peças gráficas, imagens de produtos no e-commerce, mockups e otimização de imagens. Desenvolvi banners para o site e blog, garantindo uma identidade visual impactante.",
+      "role": "Designer gráfico",
+      "range": "Ago/18 - Out/20"
     }
   ],
   "courses": [

@@ -1,0 +1,70 @@
+.section {
+  padding: 3.75rem 0;
+
+  .container {
+    max-width: 750px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .currently {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .item {
+        display: grid;
+        gap: 0.3125rem 0.625rem;
+        grid-template-columns: minmax(5rem, 150px) minmax(500px, 1fr);
+        grid-template-rows: auto 1fr;
+
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          margin: 0;
+        }
+
+        .role {
+          color: var(--currently-role);
+          font-size: 1.125rem;
+          font-weight: 600;
+          grid-column: 2/-1;
+          grid-row: 1/2;
+        }
+
+        .company {
+          color: var(--currently-company);
+          font-size: 1rem;
+          font-weight: 600;
+          grid-column: 1/2;
+          grid-row: 1/-1;
+          letter-spacing: 0;
+          text-align: right;
+
+          border-right: var(--currently-border);
+          padding-right: 0.625rem;
+
+          .range {
+            color: var(--currently-range);
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 300;
+            margin-top: 0.3125rem;
+          }
+        }
+
+        .description {
+          color: var(--currently-description);
+          font-size: 0.875rem;
+          line-height: 1.45;
+          grid-column: 2/-1;
+          grid-row: 2/-1;
+        }
+      }
+    }
+  }
+}
