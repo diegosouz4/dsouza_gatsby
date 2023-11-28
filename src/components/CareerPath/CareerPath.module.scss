@@ -17,7 +17,7 @@
       .item {
         display: grid;
         gap: 0.3125rem 0.625rem;
-        grid-template-columns: minmax(5rem, 150px) minmax(500px, 1fr);
+        grid-template-columns: minmax(5rem, 150px) 1fr;
         grid-template-rows: auto 1fr;
 
         h3,
