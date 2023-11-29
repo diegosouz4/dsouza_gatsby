@@ -24,9 +24,9 @@
 
     &:focus,
     &:hover {
-      background-color: var(--menu-links);
-      border-color: var(--menu-links);
-      color: var(--color-white);
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-primary-dark);
     }
   }
 

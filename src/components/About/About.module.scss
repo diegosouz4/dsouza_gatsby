@@ -41,12 +41,38 @@
           max-width: 350px;
         }
       }
+
+      .btn {
+        border-radius: 0.25rem;
+        border: 2px solid currentColor;
+        color: var(--menu-links);
+        display: block;
+        font-family: var(--main-font);
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        margin: 1rem auto 0;
+        width: 180px;
+        text-align: center;
+        text-decoration: none;
+
+        position: relative;
+        transition: var(--pop);
+
+        &:hover,
+        &:focus {
+          transform: scale(1.03);
+          background-color: var(--color-primary);
+          border-color: var(--color-primary);
+          color: var(--color-primary-dark);
+        }
+      }
     }
 
     .content {
       p {
-        max-width: 50ch;
-        line-height: 1.45;
+        max-width: 55ch;
+        line-height: 1.5;
         @media (max-width: 640px) {
           margin-left: auto;
           margin-right: auto;

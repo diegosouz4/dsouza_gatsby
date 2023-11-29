@@ -1,0 +1,73 @@
+.card {
+  background-color: var(--cards-bg);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid var(--slider-card-border);
+  box-shadow: 0 5px 10px -4px rgba(37, 55, 81, 0.25);
+  overflow: hidden;
+  padding: 0.625rem;
+  height: 100%;
+
+  @media (min-width: 600px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .thumb {
+    border-radius: 0.5rem;
+    pointer-events: none;
+    order: 1;
+    @media (min-width: 600px) {
+      width: calc(50% - 0.3125rem);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 10/7;
+      object-fit: contain;
+    }
+  }
+
+  .content {
+    padding: 1rem 0;
+    text-align: center;
+
+    @media (min-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: calc(50% - 0.3125rem);
+      padding: 0 1.25rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .tags {
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+
+      span {
+        color: var(--cases-tag);
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .btn {
+      font-size: 0.875rem;
+      max-width: 120px;
+      padding: 0.625rem;
+    }
+  }
+}

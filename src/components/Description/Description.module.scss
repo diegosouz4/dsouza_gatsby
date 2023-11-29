@@ -1,0 +1,12 @@
+.section {
+  padding: 3.75rem 0;
+  .container{
+    max-width: 1000px;
+
+    .description{
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

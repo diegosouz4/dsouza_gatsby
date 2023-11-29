@@ -6,11 +6,12 @@ import { FaDrawPolygon } from "@react-icons/all-files/fa/FaDrawPolygon";
 import * as styles from "./About.module.scss";
 import CircularPatterns from '../Effects/CircularPatterns/CircularPatterns';
 
-export default function About() {
-  const { about, skills } = useStaticQuery(graphql`
+export default function About({useSummary}) {
+  const { about, summary, skills } = useStaticQuery(graphql`
     query {
       dataJson {
         about
+        summary
         skills {
           designer {
             title
@@ -36,13 +37,18 @@ export default function About() {
             alt="Diego Souza thumb"
             aria-hidden
             placeholder="none"
+            width={350}
+            height={350}
             className={styles.img}
           />
+
+          <a className={styles.btn} href="/cv-diego-souza.pdf">Download CV</a>
         </div>
 
         <div className={styles.content}>
-          <h2>Sobre <strong>mim</strong></h2>
-          {about && <p dangerouslySetInnerHTML={{ __html: about }}></p>}
+          <h2>Sobre <strong>mim</strong></h2>         
+
+          {useSummary ? <p dangerouslySetInnerHTML={{ __html: summary }}></p> : about && <p dangerouslySetInnerHTML={{ __html: about }}></p>}
 
           <div className={styles.skills}>
             <div className="dev">

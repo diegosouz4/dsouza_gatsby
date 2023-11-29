@@ -1,0 +1,31 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: 600px) {
+    justify-content: space-between;
+  }
+
+  .item {
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0.3125rem;
+
+    position: relative;
+    transition: 300ms ease;
+    &:hover,
+    &:focus {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 600px) {
+      flex-basis: 300px;
+    }
+
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+  }
+}

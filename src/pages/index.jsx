@@ -16,7 +16,7 @@ export default function HomePage() {
     <LayoutDefault>
       <HeroHome />
       <SlideSkills />
-      <About />
+      <About useSummary={true} />
       { projetos && <Cases projetos={projetos} />}
       <Partner />
       <Testemonials />
