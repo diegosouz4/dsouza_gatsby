@@ -20,8 +20,8 @@
       transform: scale(1.02);
     }
 
-    @media (max-width: 600px) {
-      flex-basis: 300px;
+    @media (max-width: 500px) {
+      width: 100%;
     }
 
     @media (min-width: 600px) {
