@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+
+  margin-bottom: 2rem;
+
+  .title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .list {
+    display: flex;
+    li {
+      padding: 0.3125rem;
+      .btn {
+        cursor: pointer;
+        border: 1px solid currentColor;
+        border-radius: 2px;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+
+        position: relative;
+        transition: 350ms var(--pop);
+
+        &:not(.active) {
+          opacity: 0.5;
+          &:hover,
+          &:focus {
+            transform: scale(1.03);
+          }
+        }
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

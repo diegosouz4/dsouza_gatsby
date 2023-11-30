@@ -4,45 +4,20 @@ import LayoutDefault from "../../Layout/LayoutDefault";
 import Hero from "../../components/Hero/Hero";
 import SlideSkills from "../../components/SlideSkills/SlideSkills";
 import Description from "../../components/Description/Description";
-import { graphql, useStaticQuery } from "gatsby";
 import Projects from "../../components/Projects/Projects";
 
-export default function ProjectsPage() {
-  const [filteredProjects, setFilteredProjects] = React.useState([]);
-  const [filterBy, setFilterBy] = React.useState('all');
+const descriptionText = "Nessa página, eu listei alguns dos projetos que desenvolvi durante esse período em que trabalhei como designer gráfico e desenvolvedor front-end.";
 
-  const projects = useStaticQuery(query).projetos.nodes;
+export default function ProjectsPage() {
 
   return (
     <LayoutDefault>
       <Hero title="Meus Projetos" showBreadcrumb={true} />
       <SlideSkills />
-      <Description description="Nessa página, eu listei alguns dos projetos que desenvolvi durante esse período em que trabalhei como designer gráfico e desenvolvedor front-end."/>
-      <Projects projects={filterBy === 'all' ? projects : filteredProjects} />
+      <Description description={descriptionText}></Description>
+      <Projects />
     </LayoutDefault>
   );
 }
 
 export const Head = () => <Seo title="Meus projetos" />
-
-const query = graphql`
-  query {
-    projetos: allWpMeuprojetov2 {
-      nodes {
-        title
-        terms {
-          nodes {
-            name
-          }
-        }
-        projectThumb {
-          node {
-            gatsbyImage(width: 400, placeholder: BLURRED, formats: WEBP)
-          }
-        }
-        slug
-        filterby
-      }
-    }
-  }
-`;
