@@ -17,17 +17,18 @@
     li {
       padding: 0.3125rem;
       .btn {
-        cursor: pointer;
-        border: 1px solid currentColor;
+        border: 1px solid var(--slider-card-border);
         border-radius: 2px;
+        box-shadow: var(--box-shadow);
+        color: var(--text-color);
+        cursor: pointer;
         font-size: 0.875rem;
         padding: 0.5rem 0.75rem;
 
         position: relative;
-        transition: 350ms var(--pop);
+        transition: transform 350ms var(--pop);
 
         &:not(.active) {
-          opacity: 0.5;
           &:hover,
           &:focus {
             transform: scale(1.03);
@@ -35,7 +36,10 @@
         }
 
         &.active {
-          opacity: 1;
+          background-color: var(--color-yellow-main);
+          border-color: var(--color-yellow-main);
+          color: var(--color-yellow-300);
+          font-weight: 600;
         }
       }
     }

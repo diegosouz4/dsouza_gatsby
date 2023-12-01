@@ -1,8 +1,8 @@
 import React from "react";
-import * as styles from './Hero.module.scss';
-import FlareEffect from "../Effects/FlareEffect/FlareEffect";
 import { Link } from "gatsby";
+import FlareEffect from "../Effects/FlareEffect/FlareEffect";
 import formattedText from "../../util/formattedText";
+import * as styles from './Hero.module.scss';
 
 const isBrowser = typeof window !== "undefined";
 
@@ -20,6 +20,12 @@ export default function Hero({showBreadcrumb, title, tags}) {
     <section className={styles.hero} aria-label='hero'>
       <div className={`${styles.container} container fadeInUp`}>
         <div className={styles.content}>
+          {tags && (
+            <ul className={styles.tags}>
+              {tags.map(({name}) => <li className={styles.tag} key={name}>{name}</li>)}
+            </ul>
+          )}
+
           {title && <h1>{title}</h1> }
 
           { showBreadcrumb && breadcrumb && (
