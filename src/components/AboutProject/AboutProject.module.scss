@@ -26,9 +26,10 @@
         line-height: 1.45;
       }
 
-      a {
-        display: inline-block;
+      .btn {
         margin-top: 1rem;
+        padding: 0.625rem 1.5rem;
+        max-width: 150px;
       }
     }
 
@@ -59,7 +60,6 @@
         width: calc(50% - 1.25rem);
       }
     }
-
   }
 
   .leftPattern {

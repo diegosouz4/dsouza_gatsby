@@ -17,3 +17,11 @@ export function LinkButtonLine({ path, className, children }) {
     </Link>
   );
 }
+
+export function ExternalLinkButtonLine({ href, className, children, target }){
+  return (
+    <a href={href} className={`${styles.btn} ${styles.line} ${className && className}`} target={target} rel={target === '_blank' && 'noopen noreferrer'}>
+      {children}
+    </a>
+  );
+}

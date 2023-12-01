@@ -1,10 +1,10 @@
 import { graphql } from "gatsby";
 import React from "react";
 import LayoutDefault from "../../Layout/LayoutDefault";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
 import Hero from '../../components/Hero/Hero';
 import AboutProject from "../../components/AboutProject/AboutProject";
+import ProjectPresentation from "../../components/ProjectPresentation/ProjectPresentation";
 
 export default function ProjetoPage({ data }) {
   const { projeto } = data;
@@ -19,15 +19,7 @@ export default function ProjetoPage({ data }) {
     <LayoutDefault>
       <Hero title={`Projeto ${projeto.title}`} showBreadcrumb={true} tags={projeto.terms && projeto.terms.nodes}/>
       <AboutProject description={projeto.projectDescription} link={projeto.projectLink} linkText={projeto.projectLabel} thumb={thumb}  />
-
-      {listImagens.length > 0 &&
-        listImagens.map((img) => (
-          <GatsbyImage
-            key={img.title}
-            image={getImage(img.gatsbyImage)}
-            alt={img.altText ? img.altText : img.title}
-          />
-        ))}
+      <ProjectPresentation images={listImagens} />
     </LayoutDefault>
   );
 }

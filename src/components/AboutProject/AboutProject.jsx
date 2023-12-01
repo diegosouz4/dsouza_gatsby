@@ -2,6 +2,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import * as styles from "./AboutProject.module.scss";
 import CircularPatterns from "../Effects/CircularPatterns/CircularPatterns";
+import { ExternalLinkButtonLine } from "../LinkButton/LinkButton";
 
 export default function AboutProject({description, link, linkText, thumb}) {
   
@@ -11,7 +12,7 @@ export default function AboutProject({description, link, linkText, thumb}) {
         <div className={styles.content}>
           <h2>Sobre o <strong>Projeto</strong></h2>
           {description && <p dangerouslySetInnerHTML={{__html: description.replaceAll(/<\/?p>/g, '')}}></p>}
-          {link && <a href={link} target="_blank" rel="noopen noreferrer">{linkText ? linkText : 'Ver projeto'}</a>}
+          {link && <ExternalLinkButtonLine className={styles.btn} href={link} target="_blank">{linkText ? linkText : 'Ver projeto'}</ExternalLinkButtonLine>}
         </div>
 
         <GatsbyImage className={styles.thumb} image={thumb} alt="thumb do projeto" />

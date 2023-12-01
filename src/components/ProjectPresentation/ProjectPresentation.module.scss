@@ -1,0 +1,26 @@
+.section {
+  position: relative;
+  z-index: 1;
+
+  .container {
+    .error {
+      font-size: 1.25rem;
+      max-width: 500px;
+      margin: 3.75rem auto;
+      text-align: center;
+    }
+
+    .img {
+      width: 100%;
+      overflow: initial;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        aspect-ratio: 16/9;
+        object-fit: contain;
+      }
+    }
+  }
+}
