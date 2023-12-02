@@ -66,8 +66,8 @@ export default function Testemonials() {
             {testemonials.map((testemonial, index) => <li className={index === itemActive ? styles.active : ''} key={testemonial.name} style={{transform: `translate3D(-${100 * itemActive}%, 0, 0)`}} aria-hidden={index !== itemActive ? true : false}><CardTestemonial info={testemonial} /></li>)}
           </ul>
 
-          <button className={`${styles.btn} ${styles.btnPrev}`} onClick={handlePrevItem} aria-label="Prev item"></button>
-          <button className={`${styles.btn} ${styles.btnNext}`} onClick={handleNextItem} aria-label="Next item"></button>
+          {itemActive !== 0 && <button className={`${styles.btn} ${styles.btnPrev}`} onClick={handlePrevItem} aria-label="Prev item"></button>}
+          {itemActive !== testemonials.length - 1 && <button className={`${styles.btn} ${styles.btnNext}`} onClick={handleNextItem} aria-label="Next item"></button>}
 
           <div className={styles.dots}>
             {testemonials.map((el, index) => <button className={index === itemActive ? styles.active : ''} onClick={() => {setItemActive(index)}} key={index} aria-label={`Show item ${index + 1}`} ></button>)}

@@ -4,6 +4,7 @@ import * as styles from "./LayoutDefault.module.scss";
 import "../assets/scss/global.scss";
 import { useTheme } from "../contexts/ThemeContext";
 import Footer from "../components/Footer/Footer";
+import SocialLinks from "../components/SocialLinks/SocialLinks";
 
 export default function LayoutDefault({ children }) {
   const {theme} = useTheme();
@@ -13,6 +14,7 @@ export default function LayoutDefault({ children }) {
       <Header />
       <main>{children}</main>
       <Footer />
+      <SocialLinks className={styles.aside} />
     </div>
   );
 }

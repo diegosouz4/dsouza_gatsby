@@ -73,8 +73,8 @@ export default function Cases({ projetos }) {
             {projetos.nodes.map((data, index) => <CaseCard key={index} data={data} isActive={itemActive === index} itemActive={itemActive} />)}
           </div>
 
-          <button className={`${styles.btn} ${styles.btnPrev}`} onClick={handlePrevItem} aria-label="Prev item"></button>
-          <button className={`${styles.btn} ${styles.btnNext}`} onClick={handleNextItem} aria-label="Next item"></button>
+          {itemActive !== 0 &&  <button className={`${styles.btn} ${styles.btnPrev}`} onClick={handlePrevItem} aria-label="Prev item"></button>}
+          {itemActive !== projetos.nodes.length - 1 && <button className={`${styles.btn} ${styles.btnNext}`} onClick={handleNextItem} aria-label="Next item"></button>}
         </div>
       </div>
     </section>

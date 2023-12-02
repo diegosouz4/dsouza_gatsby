@@ -47,6 +47,8 @@
   --currently-description: var(--color-white-600);
   --currently-border: 1px solid rgba(0, 0, 0, 0.1);
 
+  --social-links-aside: var(--color-blue-200);
+
   &.dark {
     --bg-color: var(--color-blue-500);
     --bg-section-cases: #1e2938;
@@ -92,6 +94,8 @@
     --currently-range: var(--color-white-300);
     --currently-description: var(--color-white-200);
     --currently-border: 1px solid rgba(255, 255, 255, 0.1);
+
+    --social-links-aside: var(--color-white-100);
   }
 }
 
@@ -150,5 +154,52 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: var(--thumbTheme);
     border: 2px solid var(--bgtheme);
+  }
+}
+
+.aside {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: var(--slider-btn-border);
+  border-radius: 4px 0 0 4px;
+  padding: 1rem 0.625rem;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  li {
+    & + li {
+      margin-top: 1rem;
+    }
+
+    a {
+      color: var(--menu-links);
+
+      svg {
+        color: currentColor;
+        width: 1.5rem;
+        height: auto;
+        position: relative;
+        transition: transform 250ms var(--pop);
+        path,
+        circle {
+          fill: currentColor;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--social-links-aside);
+        svg {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }
