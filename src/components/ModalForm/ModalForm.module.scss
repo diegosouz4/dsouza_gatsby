@@ -25,12 +25,16 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
+
+  max-height: 85vh;
+  overflow-y: auto;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem 0;
 
   animation: showMessage 300ms forwards var(--pop);
   transform: scale(0.5);
