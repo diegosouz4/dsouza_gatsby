@@ -1,10 +1,14 @@
 import React from 'react'
 import * as styles from './HeroHome.module.scss';
-import { LinkButtonFill, LinkButtonLine } from '../LinkButton/LinkButton';
+import { LinkButtonLine } from '../LinkButton/LinkButton';
+import { ButtonFill } from '../Button/Button';
 import { StaticImage } from 'gatsby-plugin-image';
 import FlareEffect from '../Effects/FlareEffect/FlareEffect';
+import {useTheme} from "../../contexts/ThemeContext";
 
 export default function HeroHome() {
+  const {handleModal} = useTheme();
+  
   return (
     <section className={styles.hero} aria-label='hero'>
       <div className={`${styles.container} container fadeInUp`}>
@@ -15,7 +19,7 @@ export default function HeroHome() {
           
           <div className={styles.row}>
             <LinkButtonLine className={styles.btnline} path="/projetos">Ver projetos</LinkButtonLine>
-            <LinkButtonFill path="/contato">Vamos conversar</LinkButtonFill>
+            <ButtonFill handleClick={handleModal} >Vamos conversar</ButtonFill>
           </div>
         </div>
 

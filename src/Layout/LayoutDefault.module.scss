@@ -3,6 +3,9 @@
   --bg-color: var(--color-white-100);
   --bg-section-cases: var(--color-blue-100);
 
+  --button-hover: var(--color-blue-400);
+  --button-hover-text: var(--color-white-100);
+
   --color-primary: var(--color-yellow-main);
   --color-primary-dark: var(--color-yellow-300);
   --color-support: var(--color-blue-main);
@@ -49,9 +52,19 @@
 
   --social-links-aside: var(--color-blue-200);
 
+  --modal-form-input: var(--color-white-100);
+  --modal-form-label: var(--color-blue-400);
+  --modal-form-title: var(--color-blue-400);
+  --modal-form-text: var(--color-white-500);
+  --modal-form-whatsapp: var(--color-white-500);
+  --modal-form-whatsapp-hover: var(--color-blue-200);
+
   &.dark {
     --bg-color: var(--color-blue-500);
     --bg-section-cases: #1e2938;
+
+    --button-hover: var(--color-white-100);
+    --button-hover-text: var(--color-blue-400);
 
     --color-support: var(--color-blue-300);
 
@@ -96,6 +109,13 @@
     --currently-border: 1px solid rgba(255, 255, 255, 0.1);
 
     --social-links-aside: var(--color-white-100);
+
+    --modal-form-input: var(--color-blue-300);
+    --modal-form-label: var(--color-white-200);
+    --modal-form-title: var(--color-blue-200);
+    --modal-form-text: var(--color-blue-100);
+    --modal-form-whatsapp: var(--color-white-100);
+    --modal-form-whatsapp-hover: var(--color-blue-200);
   }
 }
 

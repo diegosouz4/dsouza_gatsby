@@ -2,11 +2,15 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import CaseCard from "./CaseCard";
 import * as styles from './Cases.module.scss';
+import {ButtonLine} from "../Button/Button";
+import {useTheme} from "../../contexts/ThemeContext";
 
 export default function Cases({ projetos }) {
   const [itemActive, setItemActive] = React.useState(0);
   const [initSliderDrag, setInitSliderDrag] = React.useState(false);
   const [sliderPosiion, setSliderPosiion] = React.useState({startX: 0, movement: 0, finalX:0});
+
+  const { handleModal } = useTheme();
 
   const {jobs} = useStaticQuery(graphql`
     query {
@@ -57,7 +61,7 @@ export default function Cases({ projetos }) {
         <div className={styles.content}>
           <h2>Meus <strong>Cases</strong></h2>
           {jobs && <p>{jobs}</p>}
-          <Link to="/contato">Vamos conversar?</Link>
+          <ButtonLine className={styles.btn} handleClick={handleModal}>Vamos conversar?</ButtonLine>
         </div>
 
         <div className={styles.wrapper}>

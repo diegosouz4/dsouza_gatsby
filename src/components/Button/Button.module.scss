@@ -1,0 +1,43 @@
+.btn {
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  display: inline-block;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+
+  position: relative;
+  transition: var(--pop);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
+
+  &.line {
+    border-color: currentColor;
+    color: var(--menu-links);
+
+    &:focus,
+    &:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-primary-dark);
+    }
+  }
+
+  &.fill {
+    background-color: var(--color-primary);
+    color: var(--color-primary-dark);
+
+    &:focus,
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-blue-500);
+    }
+  }
+}

@@ -74,3 +74,10 @@ button {
   border: 0;
   cursor: pointer;
 }
+
+html{
+  &.notScroll{
+    height: 100vh;
+    overflow: hidden;
+  }
+}

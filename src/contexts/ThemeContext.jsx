@@ -7,10 +7,15 @@ const isDark = isBrowser ? window.matchMedia("(prefers-color-scheme: dark)").mat
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = React.useState("light");
+  const [showForm, setShowForm] = React.useState(false);
 
   const toggeTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+
+  const handleModal = () => {
+    setShowForm((prev) => !prev);
+  }
 
   React.useEffect(() => {
     const local = isBrowser && window.localStorage ? JSON.parse(window.localStorage.getItem("theme")) : undefined;
@@ -32,7 +37,7 @@ export const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggeTheme }}>
+    <ThemeContext.Provider value={{ theme, toggeTheme, showForm, handleModal }}>
       {children}
     </ThemeContext.Provider>
   );

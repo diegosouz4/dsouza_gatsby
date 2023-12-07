@@ -9,7 +9,7 @@ module.exports = {
     icon: "/favicon.svg",
     title: `Diego Souza | desenvolvedor front-end`,
     description: "Olá, me chamo Diego Souza. Um desenvolvedor front-end carioca e apaixonado por tecnologia.",
-    navLinks: ["Sobre", "Projetos", "Contato"],
+    navLinks: ["Sobre", "Projetos"],
   },
   flags: {
     DEV_SSR: true

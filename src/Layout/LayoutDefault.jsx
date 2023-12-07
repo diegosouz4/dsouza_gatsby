@@ -5,6 +5,7 @@ import "../assets/scss/global.scss";
 import { useTheme } from "../contexts/ThemeContext";
 import Footer from "../components/Footer/Footer";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
+import ModalForm from "../components/ModalForm/ModalForm";
 
 export default function LayoutDefault({ children }) {
   const {theme} = useTheme();
@@ -15,6 +16,7 @@ export default function LayoutDefault({ children }) {
       <main>{children}</main>
       <Footer />
       <SocialLinks className={styles.aside} />
+      <ModalForm />
     </div>
   );
 }
