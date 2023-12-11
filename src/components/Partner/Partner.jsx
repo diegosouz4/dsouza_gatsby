@@ -23,7 +23,7 @@ export default function Partner() {
   }, []);
 
   return (
-  <section className={styles.section} aria-label="clientes">
+  <motion.section className={styles.section} aria-label="clientes" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{amount: 0.8}} transition={{delay: 0.3}}>
     <motion.div ref={sliderRef} className={`${styles.container} container`} whileTap={{cursor: 'grabbing'}}>
       <motion.ul className={styles.list} drag="x" dragConstraints={{left: -sliderWidth, right: 0}}>
         <li><Poemese className={theme === 'dark' ? styles.baseColor : ''} /></li>
@@ -36,6 +36,6 @@ export default function Partner() {
         <li><Commtudo className={theme === 'dark' ? styles.baseColor : ''} /></li>
       </motion.ul>
     </motion.div>
-  </section>
+  </motion.section>
   );
 }

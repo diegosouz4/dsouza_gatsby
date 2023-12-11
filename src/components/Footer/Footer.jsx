@@ -1,22 +1,23 @@
 import React from "react";
-import NavLinks from "./NavLinks/NavLinks";
-import ContactWrapper from "./ContactWrapper/ContactWrapper";
-import Logo from "../Logo";
 import { Link } from "gatsby";
-import CircularPatterns from "../Effects/CircularPatterns/CircularPatterns";
-import SocialLinks from "../SocialLinks/SocialLinks";
 import * as styles from "./Footer.module.scss";
+import {motion} from "framer-motion";
+import ContactWrapper from "./ContactWrapper/ContactWrapper";
+import CircularPatterns from "../Effects/CircularPatterns/CircularPatterns";
+import Logo from "../Logo";
+import NavLinks from "./NavLinks/NavLinks";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={`container ${styles.container}`}>
+      <motion.div className={`container ${styles.container}`} initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{amount: 0.8}}>
         <ContactWrapper className={styles.contact} />
         <Link className={styles.logo} to="/" aria-label="Voltar para a home"><Logo /></Link>
         <NavLinks className={styles.nav} activeClass={styles.active} />
         <SocialLinks className={styles.socialLinks} />
         <p className={styles.copy}>Feito por mim © {new Date().getFullYear()}</p>
-      </div>
+      </motion.div>
 
       <CircularPatterns className={styles.leftPattern} />
       <CircularPatterns className={styles.rightPattern} />

@@ -1,6 +1,8 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import * as styles from './Testemonials.module.scss';
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import CardTestemonial from "./CardTestemonial/CardTestemonial";
 
 
@@ -39,21 +41,71 @@ export default function Testemonials() {
     setSliderPosiion((prev) => {return {...prev, finalX: sliderPosiion.movement}});
   }
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if(!initSliderDrag && sliderPosiion.finalX !== 0) {
       sliderPosiion.finalX > 0 ? handleNextItem() : handlePrevItem();
-    };   
-
-
+    };
   }, [initSliderDrag]);
 
-  return (
-    <section className={styles.section} aria-label="Depoimentos">
-      <div className={`${styles.container} container`}>
-        <h2>Depoimentos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+  React.useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-        <div className={styles.wrapper}>
+    gsap.fromTo("[data-testmonials='slider']", {
+      opacity: 0,
+      x: 400
+    }, {
+      opacity: 1,
+      x: 0,
+      scrollTrigger: {
+        trigger: "[data-testmonials='section']",
+        scrub: true,
+        start: "top 550px",
+        end: "bottom 750px"
+      }
+    });
+
+    gsap.fromTo("[data-testmonials='title']", {
+      opacity: 0,
+      y: 100
+    }, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: "[data-testmonials='section']",
+        scrub: true,
+        start: "top 550px",
+        end: "bottom 750px"
+      }
+    });
+
+    gsap.fromTo("[data-testmonials='desc']", {
+      opacity: 0,
+      y: 150
+    }, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: "[data-testmonials='section']",
+        scrub: true,
+        start: "top 550px",
+        end: "bottom 750px"
+      }
+    });
+    
+    return () => {
+      gsap.killTweensOf("[data-testmonials='title']");
+      gsap.killTweensOf("[data-testmonials='desc']");
+      gsap.killTweensOf("[data-testmonials='slider']");
+    }
+  }, []);
+
+  return (
+    <section className={styles.section} aria-label="Depoimentos" data-testmonials="section">
+      <div className={`${styles.container} container`}>
+        <h2 data-testmonials="title">Depoimentos</h2>
+        <p data-testmonials="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+
+        <div className={styles.wrapper} data-testmonials="slider">
           <ul className={`${styles.slider} ${initSliderDrag ? styles.drag : ''}`}
             onMouseDown={initDragSlider}
             onMouseMove={handleDragMove}

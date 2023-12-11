@@ -4,6 +4,8 @@ import CaseCard from "./CaseCard";
 import * as styles from './Cases.module.scss';
 import {ButtonLine} from "../Button/Button";
 import {useTheme} from "../../contexts/ThemeContext";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export default function Cases({ projetos }) {
   const [itemActive, setItemActive] = React.useState(0);
@@ -48,23 +50,60 @@ export default function Cases({ projetos }) {
     setSliderPosiion((prev) => {return {...prev, finalX: sliderPosiion.movement}});
   }
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if(!initSliderDrag && sliderPosiion.finalX !== 0) {
       sliderPosiion.finalX > 0 ? handleNextItem() : handlePrevItem();
     };
   }, [initSliderDrag]);
 
+  React.useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo("[data-cases='slider']", {
+      opacity: 0,
+      x: 500
+    }, {
+      opacity: 1,
+      x: 0,
+      scrollTrigger: {
+        trigger: "[data-cases='section']",
+        scrub: true,
+        start: "top 550px",
+        end: "bottom 750px"
+      }
+    });
+
+    gsap.fromTo("[data-cases='content']", {
+      opacity: 0,
+      y: 100
+    }, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: "[data-cases='section']",
+        scrub: true,
+        start: "top 550px",
+        end: "bottom 750px"
+      }
+    });
+    
+    return () => {
+      gsap.killTweensOf("[data-cases='slider']");
+      gsap.killTweensOf("[data-cases='content']");
+    }
+  }, []);
+
 
   return (
-    <section className={styles.section} aria-label="Meus projetos">
+    <section className={styles.section} aria-label="Meus projetos" data-cases="section">
       <div className={`${styles.container} container`}>
-        <div className={styles.content}>
+        <div className={styles.content} data-cases="content">
           <h2>Meus <strong>Cases</strong></h2>
           {jobs && <p>{jobs}</p>}
           <ButtonLine className={styles.btn} handleClick={handleModal}>Vamos conversar?</ButtonLine>
         </div>
 
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} data-cases="slider">
           <div className={`${styles.slider} ${initSliderDrag ? styles.drag : ''}`}
             onMouseDown={initDragSlider}
             onMouseMove={handleDragMove}
