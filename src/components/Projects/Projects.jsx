@@ -47,7 +47,7 @@ export default function Projects() {
     <section className={styles.section}>
       <div className={`container`}>
         <FilterBy filterBy={filterBy} updateFilter={updateFilter} />
-        <motion.ul className={styles.projects}>
+        <motion.ul className={styles.projects} initial={{opacity: 0, y: "100px"}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{delay: 0.5}}>
           {filteredProjects && filteredProjects.map((project, index) => <motion.li initial={{ y: `${50 * index}px`, opacity: "0" }} animate={{ y: "0", opacity: "1" }} className={styles.item} key={project.title}><ProjectCard project={project} /></motion.li>)}
         </motion.ul>
       </div>
