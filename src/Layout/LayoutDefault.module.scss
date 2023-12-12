@@ -59,6 +59,8 @@
   --modal-form-whatsapp: var(--color-white-500);
   --modal-form-whatsapp-hover: var(--color-blue-200);
 
+  --icon-erro: var(--color-blue-main);
+
   &.dark {
     --bg-color: var(--color-blue-500);
     --bg-section-cases: #1e2938;
@@ -116,6 +118,8 @@
     --modal-form-text: var(--color-blue-100);
     --modal-form-whatsapp: var(--color-white-100);
     --modal-form-whatsapp-hover: var(--color-blue-200);
+
+    --icon-erro: var(--color-blue-200);
   }
 }
 
@@ -191,7 +195,7 @@ body {
   position: fixed;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
 
   li {
     & + li {

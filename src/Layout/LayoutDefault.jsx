@@ -15,7 +15,7 @@ export default function LayoutDefault({ children }) {
       <Header />
       <main>{children}</main>
       <Footer />
-      <SocialLinks className={styles.aside} />
+      <SocialLinks className={styles.aside} isAside={true} />
       <ModalForm />
     </div>
   );
