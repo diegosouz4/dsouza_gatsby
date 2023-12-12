@@ -1,0 +1,13 @@
+.links {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+
+  li {
+    width: 100%;
+    & + li {
+      margin-top: 0.75rem;
+    }
+  }
+}

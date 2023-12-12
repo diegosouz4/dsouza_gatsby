@@ -34,6 +34,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        precachePages: [`/projetos/`],
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -62,5 +68,14 @@ module.exports = {
         path: `${__dirname}/src/assets/img`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options:{
+        id: "GTM-MHN8H35",
+        includeInDevelopment: false,
+        routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
+        enableWebVitalsTracking: true,
+      }
+    }
   ],
 };

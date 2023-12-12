@@ -1,0 +1,38 @@
+.section {
+  height: 100%;
+  padding: 1.5rem 0;
+  .container {
+    max-width: 600px;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .thumb{
+      margin-bottom: 1.5rem;
+      img{
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+
+    h1 {
+      color: var(--title-color);
+      font-size: 2rem;
+      @media (min-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 450px;
+      text-align: center;
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}

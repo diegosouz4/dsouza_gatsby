@@ -103,7 +103,7 @@ export default function Testemonials() {
     <section className={styles.section} aria-label="Depoimentos" data-testmonials="section">
       <div className={`${styles.container} container`}>
         <h2 data-testmonials="title">Depoimentos</h2>
-        <p data-testmonials="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+        {/* <p data-testmonials="desc">Histórias reais de clientes cujas visões ganharam vida através da fusão de código e criatividade.</p> */}
 
         <div className={styles.wrapper} data-testmonials="slider">
           <ul className={`${styles.slider} ${initSliderDrag ? styles.drag : ''}`}

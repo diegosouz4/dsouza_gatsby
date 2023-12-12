@@ -61,6 +61,10 @@
 
   --icon-erro: var(--color-blue-main);
 
+  --linktree-bg: var(--color-blue-400);
+  --linktree-hover: var(--color-white-100);
+  --linktree-text: var(--color-blue-400);
+
   &.dark {
     --bg-color: var(--color-blue-500);
     --bg-section-cases: #1e2938;
@@ -120,6 +124,10 @@
     --modal-form-whatsapp-hover: var(--color-blue-200);
 
     --icon-erro: var(--color-blue-200);
+
+    --linktree-bg: var(--color-blue-200);
+    --linktree-hover: var(--color-blue-200);
+    --linktree-text: var(--color-blue-100);
   }
 }
 

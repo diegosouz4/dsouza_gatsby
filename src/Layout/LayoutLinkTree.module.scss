@@ -1,0 +1,41 @@
+.links {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  position: relative;
+
+  .main{
+    position: relative;
+    z-index: 2;
+  }
+
+  footer {
+    min-height: initial;
+    padding: 2.5rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .leftPattern {
+    top: 50px;
+    left: -250px;
+    opacity: 0.75;
+    @media (min-width: 768px) {
+      opacity: 1;
+      top: 50px;
+      left: -200px;
+    }
+  }
+
+  .rightPattern {
+    bottom: 30px;
+    right: -280px;
+    opacity: 0.75;
+
+    @media (min-width: 1000px) {
+      opacity: 1;
+      bottom: 20px;
+      right: -200px;
+    }
+  }
+}
