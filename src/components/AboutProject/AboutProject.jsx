@@ -20,7 +20,7 @@ export default function AboutProject({description, link, linkText, thumb}) {
       scrollTrigger: {
         trigger: "[data-aboutproject='section']",
         scrub: false,
-        start: "top 350px",
+        start: "top 450px",
         end: "bottom 550px"
       }
     });
@@ -34,8 +34,8 @@ export default function AboutProject({description, link, linkText, thumb}) {
       scrollTrigger: {
         trigger: "[data-aboutproject='section']",
         scrub: false,
-        start: "top 350px",
-        end: "bottom 450px"
+        start: "top 450px",
+        end: "bottom 550px"
       }
     });
 
@@ -48,8 +48,8 @@ export default function AboutProject({description, link, linkText, thumb}) {
       scrollTrigger: {
         trigger: "[data-aboutproject='section']",
         scrub: false,
-        start: "top 350px",
-        end: "bottom 450px"
+        start: "top 450px",
+        end: "bottom 550px"
       }
     });
 
@@ -62,8 +62,8 @@ export default function AboutProject({description, link, linkText, thumb}) {
       scrollTrigger: {
         trigger: "[data-aboutproject='section']",
         scrub: false,
-        start: "top 350px",
-        end: "bottom 450px"
+        start: "top 450px",
+        end: "bottom 550px"
       }
     });
     
