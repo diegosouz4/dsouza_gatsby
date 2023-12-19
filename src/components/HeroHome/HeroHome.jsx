@@ -23,7 +23,15 @@ export default function HeroHome() {
           </div>
         </div>
 
-        <StaticImage aria-hidden placeholder='none' className={styles.img} src='../../assets/img/dsouza-hero-image.png' alt='Diego Souza designer e desenvolvedor front-end' />
+        <StaticImage 
+          aria-hidden
+          placeholder='none'
+          className={styles.thumb}
+          id={styles.thumb}
+          style={{position: 'absolute', bottom: 0, right: 20, overflow: 'visible'}}
+          src='../../assets/img/dsouza-hero-image.png'
+          alt='Diego Souza designer e desenvolvedor front-end'
+        />
         
         <div className={styles.background}>
           <FlareEffect className={styles.flareRight} />

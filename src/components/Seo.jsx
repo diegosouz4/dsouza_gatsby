@@ -32,10 +32,10 @@ export default function Seo({ title, description, pathname, children }) {
       <meta name="twitter:description" content={seoData.description} />
       <meta name="twitter:image" content={seoData.image} />
       <meta name="twitter:creator" content={seoData.twitterUsername} />
-      <link rel="icon" href={seoData.icon} type="image/svg+xml"></link>
       <meta name="author" content={seoData.author} />
       <meta http-equiv="content-language" content="pt-br" />
       {/* <meta name="color-scheme" content="dark light" /> */}
+      <link rel="icon" href={seoData.icon} type="image/svg+xml"></link>
       {children}
     </>
   );

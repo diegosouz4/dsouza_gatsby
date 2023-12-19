@@ -31,6 +31,12 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/assets/img/icon.png",
+        name: `dsouza.com.br`,
+        short_name: `Dsouza`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        cache_busting_mode: 'none',
       },
     },
     {
